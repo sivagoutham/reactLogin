@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Login from './components/Login/login';
 import Dashboard from './components/Dashboard/dashboard'
 function App() {
@@ -8,10 +8,10 @@ function App() {
     <div className="App">
       <div className='container'>
         <Router >
-          <switch>
-            <Route exact path="/reactLogin" component={Login} />
+          <Switch>
+            <Route exact path="/" component={Login} />
             <Route path='/dashboard' component ={Dashboard}/>
-          </switch>
+          </Switch>
         </Router>
       </div>
     </div>
