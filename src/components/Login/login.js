@@ -32,8 +32,8 @@ class Login extends Component {
     if (username && password) {
        await this.props.login(username, password);
        if(this.props.loginData === 'success'){
-        let url = 'https://sivagoutham.github.io/reactLogin/#/dashboard';
-       window.location.href =url;
+      //   let url = 'https://sivagoutham.github.io/reactLogin/#/dashboard';
+      //  window.location.href =url;
 
       }else{
         

@@ -23,7 +23,9 @@ export const login= (username,password)=>{
                 console.log(element)
                 if(element.username === username && element.password === password){
                     console.log('test')
+                    
                     dispatch({type:GET_LOGIN,payload:"success"})
+                    history.push('https://sivagoutham.github.io/reactLogin/#/dashboard')
                 }else{
                     dispatch({type:GET_LOGIN,payload:'failure'})
                 }
