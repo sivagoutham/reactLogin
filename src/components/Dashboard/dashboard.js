@@ -20,6 +20,7 @@ class Dashboard extends Component {
   }
 
   render() {
+    window.location.reload(true)
     const users = this.props.employee;
     console.log(users);
     return (
