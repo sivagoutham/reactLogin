@@ -23,9 +23,7 @@ export const login= (username,password)=>{
                 console.log(element)
                 if(element.username === username && element.password === password){
                     console.log('test')
-                    
                     dispatch({type:GET_LOGIN,payload:"success"})
-                    history.push('/dashboard')
                 }else{
                     dispatch({type:GET_LOGIN,payload:'failure'})
                 }
