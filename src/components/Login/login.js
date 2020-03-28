@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../redux/actions/action";
 import "./login.css";
@@ -33,7 +32,8 @@ class Login extends Component {
     if (username && password) {
        await this.props.login(username, password);
        if(this.props.loginData === 'success'){
-       window.location.href =window.location.hash+ "dashboard";
+        return <Redirect to="dashboard" push={true} />
+       //window.location.href =window.location.hash+ "dashboard";
 
       }else{
         
