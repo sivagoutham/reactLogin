@@ -16,11 +16,11 @@ class Dashboard extends Component {
     this.props.getEmployees();
   }
   handleClick =()=>{
-    window.location.href = '/'
+    window.history.back();
   }
 
   render() {
-    window.location.reload(true)
+    
     const users = this.props.employee;
     console.log(users);
     return (
