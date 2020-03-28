@@ -32,8 +32,8 @@ class Login extends Component {
     if (username && password) {
        await this.props.login(username, password);
        if(this.props.loginData === 'success'){
-        return <Redirect to="/dashboard" push={true} />
-       //window.location.href =window.location.hash+ "dashboard";
+        
+       window.location.href ="dashboard";
 
       }else{
         
