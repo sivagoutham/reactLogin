@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        <Router basename="/">
+        <Router >
           <switch>
             <Route exact path="/" component={Login} />
             <Route path='/dashboard' component ={Dashboard}/>
