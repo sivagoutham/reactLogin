@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { history } from './components/redux/history';
 import Login from './components/Login/login';
 import Dashboard from './components/Dashboard/dashboard'
@@ -10,7 +10,7 @@ function App() {
       <div className='container'>
         <Router history={history}>
           <Switch>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/reactLogin" component={Login} />
             <Route path='/dashboard' component ={Dashboard}/>
           </Switch>
         </Router>
