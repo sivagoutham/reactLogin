@@ -4,6 +4,8 @@ import { login } from "../redux/actions/action";
 import "./login.css";
 import { Redirect } from 'react-router-dom'
 
+const validEmailRegex = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+const validPassword = RegExp(/^[0-9a-zA-Z]+$/)
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,11 @@ class Login extends Component {
       username: "",
       password: "",
       submitted: false,
-      message:false
+      message:false,
+      errors:{
+        email: '',
+        password : '',
+      }
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +27,29 @@ class Login extends Component {
   handleChange(e) {
     e.preventDefault();
     const { name, value } = e.target;
-    this.setState({ [name]: value,message:false });
+    let errors = this.state.errors;
+    let emailValid = errors.email;
+    let passwordValid = errors.password;
+    if(value.length>0){
+      switch (name) {
+        case 'username': 
+        emailValid = validEmailRegex.test(value)
+          errors.email =  emailValid? '':'Email is not valid!'
+          break;
+        case 'password':
+          passwordValid = validPassword.test(value)
+          errors.password =  passwordValid? '':'Password is not valid!'
+        
+          break;
+        default:
+          break;
+      }
+      
+    }else{
+    errors.email ='';
+    errors.password=''
+    }
+    this.setState({errors, [name]: value,message:false });
   }
 
  async handleSubmit(e) {
@@ -44,7 +72,7 @@ class Login extends Component {
   }
 
   render() {
-    const { username, password, submitted,message } = this.state;
+    const { username, password, submitted,message,errors } = this.state;
     return (
       <div className="center">
         <h2>Login</h2>
@@ -58,6 +86,7 @@ class Login extends Component {
               value={username}
               onChange={this.handleChange}
             />
+            <span className='help-block'>{errors.email}</span>
             {submitted && !username && (
               <div className="help-block">Username is required</div>
             )}
@@ -72,6 +101,7 @@ class Login extends Component {
               value={password}
               onChange={this.handleChange}
             />
+            <span className='help-block'>{errors.password}</span>
             {submitted && !password && (
               <div className="help-block">Password is required</div>
             )}
