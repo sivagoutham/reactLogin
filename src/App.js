@@ -11,7 +11,6 @@ function App() {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route path='/dashboard' component ={Dashboard}/>
-            <Redirect from="/dashboard" to="/#/dashboard" />
           </Switch>
         </Router>
       </div>
