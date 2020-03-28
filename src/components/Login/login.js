@@ -56,8 +56,8 @@ class Login extends Component {
     e.preventDefault();
 
     this.setState({ submitted: true });
-    const { username, password } = this.state;
-    if (username && password) {
+    const { username, password,errors } = this.state;
+    if (username && password && errors.email===''&&errors.password==='') {
        await this.props.login(username, password);
        if(this.props.loginData === 'success'){
         let url = 'https://sivagoutham.github.io/reactLogin/#/dashboard';
