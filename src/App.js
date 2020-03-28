@@ -9,8 +9,8 @@ function App() {
       <div className='container'>
         <Router basename="/">
           <switch>
-            <Route exact path="/" component={Login} />
-            <Route path='/dashboard' component ={Dashboard}/>
+            <Route exact path="/reactLogin" component={Login} />
+            <Route path='/reactLogin/dashboard' component ={Dashboard}/>
           </switch>
         </Router>
       </div>
