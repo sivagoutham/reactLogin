@@ -25,7 +25,7 @@ export const login= (username,password)=>{
                     console.log('test')
                     
                     dispatch({type:GET_LOGIN,payload:"success"})
-                    history.push('https://sivagoutham.github.io/reactLogin/#/dashboard')
+                    history.push('#/dashboard')
                 }else{
                     dispatch({type:GET_LOGIN,payload:'failure'})
                 }
