@@ -38,7 +38,6 @@ class Login extends Component {
       //  let URL = window.location.href+'dashboard'
       //  console.log(URL);
        window.location.href = "https://sivagoutham.github.io/reactLogin/#/dashboard";
-       return false;
 
       }else{
         
