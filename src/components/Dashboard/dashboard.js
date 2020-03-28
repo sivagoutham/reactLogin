@@ -15,7 +15,7 @@ class Dashboard extends Component {
     this.props.getEmployees();
   }
   handleClick =()=>{
-    window.location.href = '/reactLogin'
+    window.location.href = '/'
   }
 
   render() {
