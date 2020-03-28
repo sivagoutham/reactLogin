@@ -34,7 +34,7 @@ class Login extends Component {
        await this.props.login(username, password);
        if(this.props.loginData === 'success'){
        console.log(this.props.loginData)
-       window.location.href = '/dashboard'
+       window.location.hash = '/dashboard'
       }else{
         
        this.setState({message:true})
