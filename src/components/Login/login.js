@@ -38,7 +38,6 @@ class Login extends Component {
       }else{
         
        this.setState({message:true})
-        console.log(this.props.loginData)
         
       }
     }

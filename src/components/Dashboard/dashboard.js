@@ -21,7 +21,6 @@ class Dashboard extends Component {
   render() {
     
     const users = this.props.employee;
-    console.log(users);
     return (
       <React.Fragment>
         
