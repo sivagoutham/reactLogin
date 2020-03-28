@@ -1,8 +1,6 @@
-const employeeReducer = (state=[],action)=>{
+const loginReducer = (state=[],action)=>{
 
     switch(action.type){
-        case 'GET_EMPLOYEES':
-            return action.payload;
             case 'GET_LOGIN':
             return action.payload;
         default:
@@ -10,4 +8,4 @@ const employeeReducer = (state=[],action)=>{
     }
 }
 
-export default employeeReducer;
+export default loginReducer;
