@@ -37,7 +37,8 @@ class Login extends Component {
        console.log(window.location.href)
       //  let URL = window.location.href+'dashboard'
       //  console.log(URL);
-       window.location.href = '#/dashboard'
+       window.location.href = '#/dashboard';
+       return false;
 
       }else{
         
