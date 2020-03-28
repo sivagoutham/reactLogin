@@ -63,6 +63,7 @@ class Login extends Component {
               <div className="help-block">Username is required</div>
             )}
           </div>
+          <br/>
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
