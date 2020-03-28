@@ -12,6 +12,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    window.location.reload(true)
     this.props.getEmployees();
   }
   handleClick =()=>{
