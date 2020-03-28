@@ -9,7 +9,7 @@ function App() {
       <div className='container'>
         <Router >
           <switch>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/reactLogin" component={Login} />
             <Route path='/dashboard' component ={Dashboard}/>
           </switch>
         </Router>
