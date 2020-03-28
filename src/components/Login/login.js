@@ -35,9 +35,9 @@ class Login extends Component {
        if(this.props.loginData === 'success'){
        console.log(this.props.loginData)
        console.log(window.location.href)
-       let URL = window.location.href+'dashboard'
-       console.log(URL);
-       window.location.href = URL
+      //  let URL = window.location.href+'dashboard'
+      //  console.log(URL);
+       window.location.href = 'dashboard'
       }else{
         
        this.setState({message:true})
